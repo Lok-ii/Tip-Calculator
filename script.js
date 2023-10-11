@@ -1,0 +1,38 @@
+let bill = document.querySelector("#bill");
+let people = document.querySelector("#people");
+let buttons = document.querySelectorAll(".tipButton");
+let reset = document.querySelector(".reset");
+
+let totalAmount = document.querySelector("#totalAmount");
+let tipAmount = document.querySelector("#tipAmount");
+
+
+
+buttons.forEach(val =>{
+    val.addEventListener("click", ()=>{
+        if(bill.value <= 0 && people.value <= 0){
+            alert("Enter a valid Bill Amount and Number of People");
+        }else if(people.value <= 0 || people.value - Math.floor(people.value) != 0){
+            alert("Enter valid Number of People");
+        }else if(bill.value <= 0){
+            alert("Enter a valid Bill Amount");
+        }else{
+            val.style.transform = "Scale(0.9)";
+            setTimeout(() => {
+                val.style.transform = "Scale(1)";
+            }, 200);
+            let totalBill = Number(bill.value) / Number(people.value); 
+            totalAmount.innerText = totalBill;
+            tipAmount.innerText = totalBill * (val.value / 100);
+        }
+    });
+});
+
+reset.addEventListener("click", ()=> {
+    bill.value = "";
+    people.value = 1;
+    totalAmount.innerText = "0.00";
+    tipAmount.innerText = "0.00";
+})
+
+

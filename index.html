@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cousine&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Tip Calculator</h1>
+      <div class="billInfo">
+        <div class="billInput">
+          <div>
+            <label for="bill">How much was your bill?</label>
+            <p>₹ <input type="number" name="bill" id="bill" required /></p>
+          </div>
+          <div>
+            <label for="people">How many people are sharing the bill?</label>
+            <p>
+              <input type="number" name="people" id="people" value="1" required /> People
+            </p>
+          </div>
+          <div class="tip">
+            <p>How was the service? (Tip %)</p>
+            <div class="buttons">
+              <button class="tipButton tooltip" value="30">30%<span class="tooltiptext">Outstanding</span></button>
+              <button class="tipButton tooltip" value="20">20%<span class="tooltiptext">Good</span></button>
+              <button class="tipButton tooltip" value="15">15%<span class="tooltiptext">Okay</span></button>
+              <button class="tipButton tooltip" value="10">10%<span class="tooltiptext">Bad</span></button>
+              <button class="tipButton tooltip" value="5">5%<span class="tooltiptext">Teribble</span></button>
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="billTotal">
+          <div>
+            <p>Tip Amount / Person</p>
+            <span>₹ <span id="tipAmount">0.00</span></span>
+          </div>
+          <div>
+            <p>Total / Person</p>
+            <span>₹ <span id="totalAmount">0.00</span></span>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
