@@ -17,10 +17,10 @@ buttons.forEach(val =>{
         }else if(bill.value <= 0){
             alert("Enter a valid Bill Amount");
         }else{
-            val.style.transform = "Scale(0.9)";
+            val.style.transform = "Scale(0.95)";
             setTimeout(() => {
                 val.style.transform = "Scale(1)";
-            }, 200);
+            }, 150);
             let totalBill = Number(bill.value) / Number(people.value); 
             totalAmount.innerText = totalBill;
             tipAmount.innerText = totalBill * (val.value / 100);
