@@ -125,7 +125,7 @@ input {
     content: "";
     position: absolute;
     top: -30%;
-    left: 50%;
+    left: 35%;
     transform: rotate(180deg);
     /* margin-top: -38px; */
     border-width: 5px;

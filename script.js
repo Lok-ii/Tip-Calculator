@@ -22,8 +22,8 @@ buttons.forEach(val =>{
                 val.style.transform = "Scale(1)";
             }, 150);
             let totalBill = Number(bill.value) / Number(people.value); 
-            totalAmount.innerText = totalBill;
-            tipAmount.innerText = totalBill * (val.value / 100);
+            totalAmount.innerText = Math.round(totalBill);
+            tipAmount.innerText = Math.round(totalBill * (val.value / 100));
         }
     });
 });
