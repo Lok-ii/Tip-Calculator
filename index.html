@@ -18,44 +18,70 @@
         <div class="billInput">
           <div>
             <label for="bill">How much was your bill?</label>
-            <p>₹ <input type="number" name="bill" id="bill" required /></p>
+            <div>
+              <select name="currency" id="currency">
+                <option value="₹">₹ - Indian Rupee</option>
+                <option value="؋">؋ - Afghan Afghani</option>
+                <option value="$">$ - Australian Dollar</option>
+                <option value="฿">฿ - Bitcoin</option>
+                <option value="$">$ - Canadian Dollar</option>
+                <option value="¥">¥ - Chinese Yuan</option>
+                <option value="€">€ - Euro</option>
+                <option value="¥">¥ - Japanese Yen</option>
+                <option value="$">$ - New Zealand Dollar</option>
+                <option value="$">$ - Singapore Dollar</option>
+                <option value="$">$ - US Dollar</option>
+              </select>
+              <input type="number" name="bill" id="bill" required />
+            </div>
           </div>
           <div>
             <label for="people">How many people are sharing the bill?</label>
             <p>
-              <input type="number" name="people" id="people" value="1" required /> People
+              <input
+                type="number"
+                name="people"
+                id="people"
+                value="1"
+                required
+              />
+              People
             </p>
           </div>
           <div class="tip">
             <p>How was the service? (Tip %)</p>
             <div class="buttons">
               <div class="tooltip">
-                <button class="tipButton" value="30">30%</button><span class="tooltiptext">Outstanding</span>
+                <button class="tipButton" value="30">30%</button
+                ><span class="tooltiptext">Outstanding</span>
               </div>
               <div class="tooltip">
-                <button class="tipButton" value="20">20%</button><span class="tooltiptext">Good</span>
+                <button class="tipButton" value="20">20%</button
+                ><span class="tooltiptext">Good</span>
               </div>
               <div class="tooltip">
-                <button class="tipButton" value="15">15%</button><span class="tooltiptext">Okay</span>
+                <button class="tipButton" value="15">15%</button
+                ><span class="tooltiptext">Okay</span>
               </div>
               <div class="tooltip">
-                <button class="tipButton" value="10">10%</button><span class="tooltiptext">Bad</span>
+                <button class="tipButton" value="10">10%</button
+                ><span class="tooltiptext">Bad</span>
               </div>
               <div class="tooltip">
-                <button class="tipButton" value="5">5%</button><span class="tooltiptext">Terrible</span>
+                <button class="tipButton" value="5">5%</button
+                ><span class="tooltiptext">Terrible</span>
               </div>
             </div>
-            
           </div>
         </div>
         <div class="billTotal">
           <div>
             <p>Tip Amount / Person</p>
-            <span>₹ <span id="tipAmount">0.00</span></span>
+            <span><span class="currencySymbol">₹</span> <span id="tipAmount">0.00</span></span>
           </div>
           <div>
             <p>Total / Person</p>
-            <span>₹ <span id="totalAmount">0.00</span></span>
+            <span><span class="currencySymbol">₹</span>  <span id="totalAmount">0.00</span></span>
           </div>
           <button class="reset">Reset</button>
         </div>

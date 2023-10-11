@@ -5,7 +5,8 @@ let reset = document.querySelector(".reset");
 
 let totalAmount = document.querySelector("#totalAmount");
 let tipAmount = document.querySelector("#tipAmount");
-
+let currency = document.querySelector("select");
+let currencySymbol = document.querySelectorAll(".currencySymbol");
 
 
 buttons.forEach(val =>{
@@ -27,6 +28,11 @@ buttons.forEach(val =>{
         }
     }, true);
 });
+
+currency.addEventListener("input", ()=>{
+    currencySymbol[0].innerText = currency.value;
+    currencySymbol[1].innerText = currency.value;
+})
 
 reset.addEventListener("click", ()=> {
     bill.value = "";

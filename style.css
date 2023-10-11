@@ -46,13 +46,17 @@ main {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-input {
+input, select {
   background-color: #c5e4e7;
   border: none;
   border-radius: 0.2rem;
   height: 2rem;
   padding-left: 0.8rem;
   outline: none;
+}
+
+select{
+  width: 5rem;
 }
 
 .tipButton {
