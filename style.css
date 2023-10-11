@@ -121,7 +121,7 @@ input {
   opacity: 0;
   transition: opacity 0.3s;
 }
-.tooltip .tooltiptext::after {
+.tooltiptext::after {
     content: "";
     position: absolute;
     top: -30%;
