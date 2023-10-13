@@ -2,7 +2,7 @@ let bill = document.querySelector("#bill");
 let people = document.querySelector("#people");
 let buttons = document.querySelectorAll(".tipButton");
 let reset = document.querySelector(".reset");
-
+let option = document.querySelector("#rupee");
 let totalAmount = document.querySelector("#totalAmount");
 let tipAmount = document.querySelector("#tipAmount");
 let currency = document.querySelector("select");
@@ -39,6 +39,7 @@ reset.addEventListener("click", ()=> {
     people.value = 1;
     totalAmount.innerText = "0.00";
     tipAmount.innerText = "0.00";
+    option.selected = true;
 })
 
 
